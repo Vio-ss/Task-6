@@ -3,13 +3,13 @@ pipeline {
     stages {
          stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Vio-ss/Assessment-4'
+                git branch: 'main', url: 'https://github.com/Vio-ss/Task-6'
                 
             }
         }
         stage('Build') {
            steps {
-               checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Vio-ss/Assessment-4']])
+               checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Vio-ss/Task-6']])
                bat "mvn clean package"
            }
         }
